@@ -1551,6 +1551,17 @@
         setTimeout(() => toast.classList.remove('show'), 3000);
     }
 
+    // Initialize Theme on startup (default: manus-midnight)
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'manus-midnight';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    presetBtns.forEach(btn => {
+        if (btn.getAttribute('data-preset') === savedTheme) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
     themeToggleBtn.addEventListener('click', () => themePanel.classList.toggle('open'));
     themePanelClose.addEventListener('click', () => themePanel.classList.remove('open'));
 
