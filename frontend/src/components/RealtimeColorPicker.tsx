@@ -109,11 +109,14 @@ export default function RealtimeColorPicker() {
               onClick={() => handleSelectPreset('quartz-light')}
               className={`col-span-2 p-2 rounded-xl border text-left flex items-center gap-2 font-medium transition-all ${
                 activeTheme === 'quartz-light'
-                  ? 'border-blue-600 bg-blue-600/10 text-white'
+                  ? 'border-lime-500 bg-lime-500/10 text-white'
                   : 'border-gray-800 text-gray-400 hover:border-gray-700'
               }`}
             >
-              <div className="w-3 h-3 rounded-full bg-white border border-gray-400"></div>
+              <div className="flex gap-1">
+                <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+              </div>
               Minimal Quartz Light Mode
             </button>
           </div>
