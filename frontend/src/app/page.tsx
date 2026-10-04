@@ -18,6 +18,8 @@ import {
 } from '@/lib/api';
 import { ProfileInfo, Skill, Experience, Project } from '@/types';
 
+import RealtimeColorPicker from '@/components/RealtimeColorPicker';
+
 export default function Home() {
   const [profile, setProfile] = useState<ProfileInfo | null>(null);
   const [skills, setSkills] = useState<Skill[]>([]);
@@ -50,15 +52,24 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#0d0f14] text-[#e8eaf0] selection:bg-blue-500/30 selection:text-blue-200">
-      <Navbar />
-      <HeroSection profile={profile} />
-      <AboutSection profile={profile} />
-      <SkillsSection skills={skills} />
-      <ExperienceSection experiences={experiences} />
-      <ProjectsSection projects={projects} />
-      <ContactSection />
-      <Footer />
+    <main className="min-h-screen bg-[#080a0f] text-[#f1f5f9] selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden">
+      {/* Haikei Generative Background Vector Blobs */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-60">
+        <div className="absolute -top-32 -left-32 w-[550px] h-[550px] rounded-full bg-blue-500/20 blur-[100px] animate-blob-1"></div>
+        <div className="absolute -bottom-32 -right-32 w-[600px] h-[600px] rounded-full bg-purple-500/20 blur-[100px] animate-blob-2"></div>
+      </div>
+
+      <div className="relative z-10">
+        <Navbar />
+        <HeroSection profile={profile} />
+        <AboutSection profile={profile} />
+        <SkillsSection skills={skills} />
+        <ExperienceSection experiences={experiences} />
+        <ProjectsSection projects={projects} />
+        <ContactSection />
+        <Footer />
+        <RealtimeColorPicker />
+      </div>
     </main>
   );
 }
