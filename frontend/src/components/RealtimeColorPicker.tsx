@@ -3,16 +3,14 @@ import { Palette, X } from 'lucide-react';
 
 export default function RealtimeColorPicker() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTheme, setActiveTheme] = useState('manus-midnight');
-  const [primary, setPrimary] = useState('#3b82f6');
-  const [secondary, setSecondary] = useState('#8b5cf6');
+  const [activeTheme, setActiveTheme] = useState('quartz-light');
+  const [primary, setPrimary] = useState('#a3e635');
+  const [secondary, setSecondary] = useState('#38bdf8');
 
   useEffect(() => {
-    const saved = localStorage.getItem('portfolio-theme');
-    if (saved) {
-      setActiveTheme(saved);
-      document.documentElement.setAttribute('data-theme', saved);
-    }
+    const saved = localStorage.getItem('portfolio-theme') || 'quartz-light';
+    setActiveTheme(saved);
+    document.documentElement.setAttribute('data-theme', saved);
   }, []);
 
   const handleSelectPreset = (themeName: string) => {

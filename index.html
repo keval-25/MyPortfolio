@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="manus-midnight">
+<html lang="en" data-theme="quartz-light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,23 +16,23 @@
     <style>
         /* ── Modern Design System & Tokens (Realtime Colors Dynamic Palette Engine) ── */
         :root {
-            --bg-dark: #080a0f;
-            --bg-surface: #10141e;
-            --bg-surface-2: #161c2b;
-            --bg-card: rgba(16, 20, 30, 0.75);
+            --bg-dark: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-surface-2: #f1f5f9;
+            --bg-card: rgba(255, 255, 255, 0.88);
             
-            --primary: #3b82f6;
-            --primary-glow: rgba(59, 130, 246, 0.35);
-            --secondary: #8b5cf6;
-            --secondary-glow: rgba(139, 92, 246, 0.35);
-            --accent-gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --primary: #a3e635;
+            --primary-glow: rgba(163, 230, 53, 0.35);
+            --secondary: #38bdf8;
+            --secondary-glow: rgba(56, 189, 248, 0.35);
+            --accent-gradient: linear-gradient(135deg, #a3e635 0%, #38bdf8 100%);
             
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
+            --text-main: #0f172a;
+            --text-muted: #475569;
             --text-dim: #64748b;
             
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(59, 130, 246, 0.4);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(163, 230, 53, 0.5);
             
             --radius-lg: 20px;
             --radius-md: 14px;
@@ -47,6 +47,21 @@
         }
 
         /* ── Preset Palette Override Classes ── */
+        [data-theme="manus-midnight"] {
+            --bg-dark: #080a0f;
+            --bg-surface: #10141e;
+            --bg-surface-2: #161c2b;
+            --bg-card: rgba(16, 20, 30, 0.75);
+            --primary: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.35);
+            --secondary: #8b5cf6;
+            --secondary-glow: rgba(139, 92, 246, 0.35);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
         [data-theme="cyberpunk-neon"] {
             --bg-dark: #050811;
             --bg-surface: #0b1120;
@@ -93,16 +108,16 @@
             --bg-dark: #f8fafc;
             --bg-surface: #ffffff;
             --bg-surface-2: #f1f5f9;
-            --bg-card: rgba(255, 255, 255, 0.85);
-            --primary: #2563eb;
-            --primary-glow: rgba(37, 99, 235, 0.25);
-            --secondary: #7c3aed;
-            --secondary-glow: rgba(124, 58, 237, 0.25);
+            --bg-card: rgba(255, 255, 255, 0.88);
+            --primary: #a3e635;
+            --primary-glow: rgba(163, 230, 53, 0.35);
+            --secondary: #38bdf8;
+            --secondary-glow: rgba(56, 189, 248, 0.35);
             --text-main: #0f172a;
             --text-muted: #475569;
-            --text-dim: #94a3b8;
+            --text-dim: #64748b;
             --border-color: rgba(0, 0, 0, 0.08);
-            --border-hover: rgba(37, 99, 235, 0.4);
+            --border-hover: rgba(163, 230, 53, 0.5);
         }
 
         /* ── Base & Reset ── */
@@ -1110,7 +1125,7 @@
     <p style="font-size: 0.78rem; color: var(--text-dim); margin-bottom: 0.75rem;">Instant visual harmony presets inspired by RealtimeColors & Haikei</p>
 
     <div class="preset-grid">
-        <button class="preset-btn active" data-preset="manus-midnight">
+        <button class="preset-btn" data-preset="manus-midnight">
             <div class="color-dots">
                 <div class="color-dot" style="background: #3b82f6;"></div>
                 <div class="color-dot" style="background: #8b5cf6;"></div>
@@ -1142,10 +1157,10 @@
             Sunset Ember
         </button>
 
-        <button class="preset-btn" data-preset="quartz-light" style="grid-column: span 2;">
+        <button class="preset-btn active" data-preset="quartz-light" style="grid-column: span 2;">
             <div class="color-dots">
-                <div class="color-dot" style="background: #2563eb;"></div>
-                <div class="color-dot" style="background: #7c3aed;"></div>
+                <div class="color-dot" style="background: #a3e635;"></div>
+                <div class="color-dot" style="background: #38bdf8;"></div>
             </div>
             Minimal Quartz Light Mode
         </button>
@@ -1154,11 +1169,11 @@
     <div class="custom-color-controls">
         <div class="color-picker-row">
             <span>Primary Color</span>
-            <input type="color" id="primaryColorPicker" value="#3b82f6">
+            <input type="color" id="primaryColorPicker" value="#a3e635">
         </div>
         <div class="color-picker-row">
             <span>Secondary Accent</span>
-            <input type="color" id="secondaryColorPicker" value="#8b5cf6">
+            <input type="color" id="secondaryColorPicker" value="#38bdf8">
         </div>
     </div>
 </div>
